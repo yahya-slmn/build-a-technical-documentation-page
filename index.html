@@ -1,0 +1,301 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-bottom: 2px solid;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+@media (max-width: 815px) {
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
+ } 
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: thin;
+}
+
+code {
+background-color: #f7f7f7;
+border-radius: 5px;
+line-height: 2;
+}
+
+</style>
+</head>
+<body>
+<nav id="navbar">
+  <header>Py Documentation</header>
+<ul>
+<li><a class="nav-link" href="#The_setup">The setup</a></li>
+<li><a class="nav-link" href="#First_program">First program</a></li>
+<li><a class="nav-link" href="#comments_and_pound">Comments and pound</a></li>
+<li><a class="nav-link" href="#numbers_and_math">Numbers and math</a></li>
+<li><a class="nav-link" href="#variables_and_names">Variables and names</a></li>
+<li><a class="nav-link" href="#strings_and_text">Strings and text</a></li>
+<li><a class="nav-link" href="#asking_questions">Asking questions</a></li>
+<li><a class="nav-link" href="#reference">Reference</a></li>
+</ul>
+</nav>
+<main id="main-doc">
+<section class="main-section" id="The_setup">
+<h1>The setup</h1>
+<p>This exercise has no code. It is simply the exercise you complete to get your computer to run 
+Python. You should follow these instructions as exactly as possible</p>
+<p>windows:</p>
+<ul>
+<li>Go to http://notepad-plus-plus.org with your browser, get the Notepad++ text editor,
+and install it. You do not need to be the administrator to do this.</li>
+<li>Make sure you can get to Notepad++ easily by putting it on your desktop and/or in
+Quick Launch. Both options are available during setup.</li>
+<li>Run PowerShell from the Start menu. Search for it and you can just hit Enter to run it.</li>
+<li>Make a shortcut to it on your desktop and/or Quick Launch for your convenience.</li>
+<li>Run your Terminal program. It won’t look like much.</li>
+<li>In your Terminal program, run python. You run things in Terminal by just typing the
+name and hitting Enter:
+<ol>
+<li>If you run python and it’s not there (python is not recognized.), install it from
+http://python.org/download.</li>
+<li>Make sure you install Python 2, not Python 3.</li>
+<li>You may be better off with ActiveState Python, especially if you do not have adminis-
+trative rights</li>
+<li>If after you install it python still isn’t recognized, then in PowerShell enter this:
+[Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Python27", "User")</li>
+<li>Close PowerShell and then start it again to make sure Python now runs. If it doesn’t,
+restart may be required.</li>
+</ol>
+</li>
+<li>Type quit() and hit Enter to exit python.</li>
+<li>Use your editor to create a fi le in this directory. Make the fi le, Save or Save As... and
+pick this directory.</li>
+</section>
+<section class="main-section" id="First_program">
+<h1>First program</h1>
+<p>remember, you should have spent a good amount of time in Exercise 0, learning how to install
+a text editor, run the text editor, run the Terminal, and work with both of them. If you haven’t
+done that, then do not go on. You will not have a good time. This is the only time I’ll start an
+exercise with a warning that you should not skip or get ahead of yourself</p>
+<p>Type the following text into a single fi le named ex1.py. This is important, as Python works best
+with fi les ending in .py.</p>
+<code>
+<p>print"Hello World"</p>
+</code>
+<p>Go to your terminal and type python ex1.py, you should see "Hello World"</p>
+</section>
+<section class="main-section" id="comments_and_pound">
+<h1>comments and pound</h1>
+<p>comments are very important in your programs. They are used to tell you what something does
+in English, and they also are used to disable parts of your program if you need to remove them
+temporarily. Here’s how you use comments in Python:</p>
+<code>
+<p># A comment, this is so you can read your program later.</p>
+<p># Anything after the # is ignored by python.</p>
+<p>print "I could have code like this." # and the comment after is ignored</p>
+<p># You can also use a comment to "disable" or comment out a piece of code:</p>
+<p># print "This won't run."</p>
+<p>print "This will run."</p>
+</code>
+<h4>What you should see:</h4>
+<p>$ python ex2.py</p>
+<p>I could have code like this.</p>
+<p>This will run.</p>
+</section>
+<section class="main-section" id="numbers_and_math">
+<h1>Numbers and math</h1>
+<p>every programming language has some kind of way of doing numbers and math. Do not worry:
+programmers lie frequently about being math geniuses when they really aren’t. If they were
+math geniuses, they would be doing math, not writing ads and social network games to steal
+people’s money.</p>
+<p>This exercise has lots of math symbols:</p>
+<ul>
+<li>+ plus</li>
+<li>- minus</li>
+<li>/ slash</li>
+<li>* asterisk</li>
+<li>% percent</li>
+<li>< less- than</li>
+<li>> greater- than</li>
+<li><= less- than- equal</li>
+<li>>= greater- than- equal</li>
+</ul>
+<code>
+<p>print "I will now count my chickens:"</p>
+<p>print "Hens", 25 + 30 / 6</p>
+<p>print "Roosters", 100 - 25 * 3 % 4</p>
+<p>print "Now I will count the eggs:"</p>
+<p>print 3 + 2 + 1 - 5 + 4 % 2 - 1 / 4 + 6</p>
+<p>print "Is it true that 3 + 2 < 5 - 7?"</p>
+<p>print 3 + 2 < 5 - 7</p>
+<p>print "What is 3 + 2?", 3 + 2</p>
+<p>print "What is 5 - 7?", 5 - 7</p>
+<p>print "Oh, that's why it's False."</p>
+<p>print "How about some more."</p>
+<p>print "Is it greater?", 5 > - 2</p>
+<p>print "Is it greater or equal?", 5 >= - 2</p>
+<p>print "Is it less or equal?", 5 <= - 2</p>
+</code>
+<h4>What you should see:</h4>
+<p>$ python ex3.py</p>
+<p>I will now count my chickens:</p>
+<p>Hens 30</p>
+<p>Roosters 97</p>
+<p>Now I will count the eggs:</p>
+<p>7</p>
+<p>Is it true that 3 + 2 < 5 - 7?</p>
+<p>False</p>
+<p>What is 3 + 2? 5</p>
+<p>What is 5 - 7? - 2</p>
+<p>Oh, that's why it's False.</p>
+<p>How about some more.</p>
+<p>Is it greater? True</p>
+<p>Is it greater or equal? True</p>
+<p>Is it less or equal? False</p>
+</section>
+<section class="main-section" id="variables_and_names">
+<h1>variables and names</h1>
+<p>Now you can print things with print and you can do math. The next step is to learn about
+variables. In programming, a variable is nothing more than a name for something so you
+can use the name rather than the something as you code. Programmers use these variable
+names to make their code read more like English and because they have lousy memories. If
+they didn’t use good names for things in their software, they’d get lost when they tried to
+read their code again.</p>
+<code>
+<p>cars = 100</p>
+<p>space_in_a_car = 4.0</p>
+<p>drivers = 30</p>
+<p>passengers = 90</p>
+<p>cars_not_driven = cars - drivers</p>
+<p>cars_driven = drivers</p>
+<p>carpool_capacity = cars_driven * space_in_a_car</p>
+<p>average_passengers_per_car = passengers / cars_driven</p>
+<p>print"There are", cars, "cars available."</p>
+<p>print"There are only", drivers, "drivers available."</p>
+<p>print"There will be", cars_not_driven, "empty cars today."</p>
+<p>print"We can transport", carpool_capacity, "people today."</p>
+<p>print"We have", passengers, "to carpool today."</p>
+<p>print"We need to put about", average_passengers_per_car, "in each car."</p>
+</code>
+<h4>What you should see:</h4>
+<p>$ python ex4.py</p>
+<p>There are 100 cars available.</p>
+<p>There are only 30 drivers available.</p>
+<p>There will be 70 empty cars today.</p>
+<p>We can transport 120.0 people today.</p>
+<p>We have 90 to carpool today.</p>
+<p>We need to put about 3 in each car.</p>
+</section>
+<section class="main-section" id="strings_and_text">
+<h1>strings and text</h1>
+<p>hile you have already been writing strings, you still do not know what they do. In this exer-
+cise, we create a bunch of variables with complex strings so you can see what they are for.
+First an explanation of strings.</p>
+<p>A string is usually a bit of text you want to display to someone or “export” out of the program
+you are writing. Python knows you want something to be a string when you put either " (double-
+quotes) or ' (single- quotes) around the text. You saw this many times with your use of print
+when you put the text you want to go to the string inside " or ' after the print. Then Python
+prints it.</p>
+<p>Strings may contain the format characters you have discovered so far. You simply put the format-
+ted variables in the string, and then a % (percent) character, followed by the variable. The only
+catch is that if you want multiple formats in your string to print multiple variables, you need to
+put them inside ( ) (parentheses) separated by , (commas). It’s as if you were telling me to buy
+you a list of items from the store and you said, “I want milk, eggs, bread, and soup.” Only as a
+programmer we say, “(milk, eggs, bread, soup).”</p>
+<p>We will now type in a whole bunch of strings, variables, and formats, and print them. You will
+also practice using short abbreviated variable names. Programmers love saving themselves time
+at your expense by using annoying cryptic variable names, so let’s get you started being able to
+read and write them early on.</p>
+<code>
+<p>x = "There are %d types of people." % 10</p>
+<p>binary = "binary"</p>
+<p>do_not = "don't"</p>
+<p>y = "Those who know %s and those who %s." % (binary, do_not)</p>
+<p>print x</p>
+<p>print y</p>
+<p>print "I said: %r." % x</p>
+<p>print "I also said: '%s'." % y</p>
+<p>hilarious = False</p>
+<p>joke_evaluation = "Isn't that joke so funny?! %r"</p>
+<p>print joke_evaluation % hilarious</p>
+<p>w = "This is the left side of..."</p>
+<p>e = "a string with a right side."</p>
+<p>print w + e</p>
+</code>
+<h4>What you should see:</h4>
+<p>$ python ex6.py</p>
+<p>There are 10 types of people.</p>
+<p>Those who know binary and those who don't.</p>
+<p>I said: 'There are 10 types of people.'.</p>
+<p>I also said: 'Those who know binary and those who don't.'.</p>
+<p>Isn't that joke so funny?! False</p>
+<p>This is the left side of...a string with a right side.</p>
+</section>
+<section class="main-section" id="asking_questions">
+<h1>Asking questions</h1>
+<p>now it is time to pick up the pace. I have got you doing a lot of printing so that you get used to
+typing simple things, but those simple things are fairly boring. What we want to do now is get
+data into your programs. This is a little tricky because you have to learn to do two things that may
+not make sense right away, but trust me and do it anyway. It will make sense in a few exercises.</p>
+<p>Most of what software does is the following:</p>
+<ol>
+<li>Take some kind of input from a person.</li>
+<li>Change it.</li>
+<li>Print out something to show how it changed.</li>
+</ol>
+<p>So far you have only been printing, but you haven’t been able to get any input from a person or
+change it. You may not even know what “input” means, so rather than talk about it, let’s have you
+do some and see if you get it. In the next exercise, we’ll do more to explain it.</p>
+<code>
+<p>print "How old are you?",</p>
+<p>age = raw_input()</p>
+<p>print "How tall are you?",</p>
+<p>height = raw_input()</p>
+<p>print "How much do you weigh?",</p>
+<p>weight = raw_input()</p>
+<p>print "So, you're %r old, %r tall and %r heavy." % (age, height, weight)</p>
+</code>
+<h4>What you should see:</h4>
+<p>$ python ex11.py</p>
+<p>How old are you? 38</p>
+<p>How tall are you? 6'2"</p>
+<p>How much do you weigh? 180lbs</p>
+<p>So, you're '38' old, '6\'2"' tall and '180lbs' heavy.</p>
+</section>
+<section class="main-section" id="reference">
+<h1>Reference</h1>
+<p><strong>All the documentation in this page is taken from </strong><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiyh8Kv3fPuAhUAShUIHeWvCR8QFjACegQIHxAD&url=https%3A%2F%2Flearntocodetogether.com%2Flearn-python-the-hard-way-free-ebook-download%2F&usg=AOvVaw0lpr9QG242VXJT9-pAWpAv"> the hard way</a></p>
+
+</section>
+</main>
+</body>
+</html>
